@@ -1,0 +1,45 @@
+ ------------------------------------------------------ECMA SCRIPT--------------------------------------
+ Définition :  JAVASCRIPT est considéré comme un langage de script
+	spécification : quand on veut dévelopeper un langage de programmation, la spécification c-à-d comment 
+	ce langage va être implémenter et comment va être ecrit dont on trouve le détail de détail de toutes les fonctionnalité
+	comment ce longage va être implémenter ...
+	en gros ECMA SCRIPT  c'est l'organisation qui se charge de tout pour que le langage reste toujours en vie et bien fonctionner..
+	et qui mettre à jour les spésifications de langage développer et ajouter des fonctionnalité pour créer une nouvelle version ...
+	les spécification qui sont mis par ecmascript ne sont par dédie seulement aux les développeur ou les gens qui implement 
+	le longage mais aussi aux tous par exemple si quelqu'un envie de créer un browser il a besoin de connaitre comment cette javascript
+	va être implementer dans ce browser ---> il faut connaitre les spésification de ecmascript...
+
+	 ecmascript6 c'est la version qui a été supporter par la majouriter des browser
+
+		--------------------------c'est quoi une variable et comment créer une variable dans js -------------------
+		
+	Une variable c'est un élément qui à été stocker dans la mémoire relative RAM 
+	
+	---------------------------------------  Variable Scope ----------------------------------------------------------
+	*var keyword
+	*what is vaiable scope 
+	*Global // Local Variable
+	*Funcion-Scoped // vs Block-scoped
+	*Hiosting
+	
+		 je considére que mon fichier .js comme un box et si je déclare une variable 
+		 alors je considére que cette variable est dans un global scope. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+les methode de refirence 
+les generique
+les exp lambda
+	
+	
