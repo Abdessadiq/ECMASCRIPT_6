@@ -3,7 +3,7 @@
 var myName = "ABDESSADIQ BABA HAMOU";
 console.log(myName);
 
-// maintenant si je crée une variable dans cette foncion je peux pas y accéder
+// maintenant si je crée une variable dans cette fonction je peux pas y accéder
 // à l'exterieur de bolck de cette fonction
 // donc on parle de FUNCTION-SCOPED
 // myNumber c'est local variable
@@ -20,14 +20,14 @@ if (true) {
 console.log(number); // ça passe number is
 
 // ---------- var c'est un keyword qu'on utilise dans ECMAScript 5 ---------------
-//   var keyword  c'est Funcion-Scoped  ==> c'est à dire que si j'utilise var dans
-//   la fontion je peux pas l'utilisé en dehors de la block de cette fonction
+//   var keyword  c'est Function-Scoped  ==> c'est à dire que si j'utilise var dans
+//   la fonction je peux pas l'utilisé en dehors de la block de cette fonction
 //   mais par contre si je la déclare dans un autre block que la fontion
 //   comme le block de if ou for loop .. je peur l'utiliser
 //----------------------------------------------------------------
 
 // ---------- let c'est un keyword qu'on utilise depuis ECMAScript 6 ---------------
-//   var keyword  c'est Block-Scoped  ==> c'est à dire que si j'utilise let keyword
+//   let keyword  c'est Block-Scoped  ==> c'est à dire que si j'utilise let keyword
 // dans la déclaration de variable dans n'importe block statement je peux pas y accéder
 // dehors de ce block contre le keywords var...
 
@@ -40,9 +40,9 @@ console.log(number); // ça passe number is
 // anythings c'est à dire que la varaible est existe
 // mais il est indifiner c'est comme si je déclarer  la variable mais je ne lui
 // afficte aucune valeur ------< et c'est ça le Hoisting
-//----------------------------------------------------------------
+//----------------------------- -----------------------------------
 
-console.log(enythings);
+console.log(anythings);
 var enythings = " this is any thing juste for testing"; // affichier undefined
 
 // *********************************** VAR vs LET ************************************
@@ -131,20 +131,25 @@ console.log(API_KEY);
 
 //------------------The First Exemple--------------------------------------------------
 // exemple for old version of ecmascript < 6
+// On utilise const dans la déclaration de la fonction pour éviter le changement
+// de la valeur de cette fonction  ...
 const sayHello = function (firstName, lastName) {
   return "Hello " + firstName + " " + lastName;
 };
-// <----- this is the anonymous function
+
+// function(){ //traitement } <----- this is the anonymous function
 // Exemple Use Arrow Funtion ES >=6 the new version of SC
 const sayHello1 = (firstName, lastName) =>
   "Hello " + firstName + " " + lastName;
 
 console.log(
-  sayHello("With the old version of ES" + "ABDESSADIQ", "BABA HAMOU")
+  sayHello("With the old version of ES < 6" + "ABDESSADIQ", "BABA HAMOU")
 );
 console.log(
-  sayHello1("With the last version of ES" + "ABDESSADIQ", "BABA HAMOU")
+  sayHello1("With the last version of ES > 6" + "ABDESSADIQ", "BABA HAMOU")
 );
+// RULES  --> Enlever keyword function  et Les "curly braces {}" s'il en a un seul param
+// on peut aussi enlever return si on a une seul ligne dans la fonction
 
 //------------------------------the Second Exemple  ----------------------------------
 

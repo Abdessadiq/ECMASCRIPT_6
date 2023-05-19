@@ -1,3 +1,5 @@
+//  By ABDESSADIQ BABA HAMOU
+
 const getObject = () => {
   age: 10;
   fullName: "John";
