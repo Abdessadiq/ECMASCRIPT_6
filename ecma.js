@@ -42,7 +42,7 @@ console.log(number); // ça passe number is
 // afficte aucune valeur ------< et c'est ça le Hoisting
 //----------------------------- -----------------------------------
 
-console.log(anythings);
+// console.log(anythings);
 var enythings = " this is any thing juste for testing"; // affichier undefined
 
 // *********************************** VAR vs LET ************************************
@@ -138,7 +138,8 @@ const sayHello = function (firstName, lastName) {
 };
 
 // function(){ //traitement } <----- this is the anonymous function
-// Exemple Use Arrow Funtion ES >=6 the new version of SC
+// Exemple Use Arrow Funtion ES >=6 the new version of SC  (Two Arguments)
+
 const sayHello1 = (firstName, lastName) =>
   "Hello " + firstName + " " + lastName;
 
@@ -149,11 +150,13 @@ console.log(
   sayHello1("With the last version of ES > 6" + "ABDESSADIQ", "BABA HAMOU")
 );
 // RULES  --> Enlever keyword function  et Les "curly braces {}" s'il en a un seul param
-// on peut aussi enlever return si on a une seul ligne dans la fonction
+// on peut aussi enlever return si on a une seul ligne dans la fonction Et Ajouter
+// Fat Arrow '=>' après les parentaise
 
 //------------------------------the Second Exemple  ----------------------------------
 
 // the Old version of ES
+// Exemple (One argument)
 const getFullName = function (fullName) {
   return "Hello " + fullName;
 };
@@ -209,3 +212,58 @@ const incrementNumber1 = {
   },
 };
 incrementNumber.increment();
+
+// dans l'ecxemple de ES6 on a pas besoin d'utiliser la fonction bind..
+
+// -------------------- | Template Literales | ------------------------------------------
+
+// Template Literales c'est une methode qui vient avec SC6 pour simplifier et faciliter
+// Comment on peut formater & compbiner les expression comme String variables, functions...
+
+// Exemple (1) String Concatination
+// ` .. ${Expression JS}`
+console.log("********************* | Template Laterales... | ****************");
+const firstName = "John";
+const lastName = "Dae";
+const theFullName = `${firstName} ${lastName}`;
+
+console.log(theFullName);
+// Exemple (2)
+const price = 120;
+const tax = 20;
+const taxFormula = (price * tax) / 100;
+const theTotal = `The total to pay is ${taxFormula}`;
+const total = () => {
+  return `The Total to pay is : ${taxFormula} `;
+};
+console.log(total());
+console.log(theTotal);
+
+// Exemple 3 Formating text
+const message = "This has to be on \n two line";
+console.log(message);
+// With Template Literales --->
+const messageTemplate = `This is to be on 
+Two lines`;
+console.log(messageTemplate);
+// Exemple 4
+const USER_INFOS = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 24,
+};
+
+// 1 - Formatting Code without using sequences
+// 2 - accessing to the content of  an Object
+const createMarckup = (studentInfo) => {
+  return `
+    <ul> 
+      <li>${studentInfo.firstName} </li> 
+      <li>${studentInfo.lastName} </li> 
+      <li>${studentInfo.age} </li> 
+    </ul>
+          `;
+};
+console.log(createMarckup(USER_INFOS));
+
+console.log("*****************************************************");
