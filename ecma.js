@@ -267,3 +267,26 @@ const createMarckup = (studentInfo) => {
 console.log(createMarckup(USER_INFOS));
 
 console.log("*****************************************************");
+
+// ---------------------------| Destructuring Object |-------------------------------
+
+const car = {
+  name: "fiat",
+  model: 2021,
+  weight: 850,
+  colors: {
+    red: true,
+    green: false,
+  },
+};
+
+// La création d'un desctucuring Object se fait comme : keyword (let, const ..) {} = NameObject
+const {
+  name,
+  colors: { red: redColor, green: greenClolor, blue = false },
+} = car;
+
+console.log(name);
+console.log(redColor);
+console.log(red);
+console.log(green); // Affiche gree is not defined car on a changer le nom de green
