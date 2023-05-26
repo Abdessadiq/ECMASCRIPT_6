@@ -288,5 +288,26 @@ const {
 
 console.log(name);
 console.log(redColor);
-console.log(red);
-console.log(green); // Affiche gree is not defined car on a changer le nom de green
+// console.log(red);
+// console.log(green); // Affiche gree is not defined car on a changer le nom de green
+
+// ************************ | Destructuring Object | ***********************************
+const studentInfo = [1289, "Maria Carter", "washegton"];
+// Destructuring Object c'est de faire mapper les donnés de l'array mais a condition
+// de respecter l'order avec l'index de l'array parce que il suit avec ordere
+
+// Pour  la destructuring array de notre cas 'studentInfo' C'est = >
+// exemple (1)
+const [id, hisName, city] = studentInfo;
+
+// ce code par exemple c'est bien structurer et il est répitif =! dont repeat yourself =>
+const idStudent = studentInfo[0];
+const nameStudent = studentInfo[1];
+const cityStudent = studentInfo[2];
+
+console.log(id, hisName, city);
+// Et si par exemple je change l'aurder les info vont aussi changer selon l'order
+// de l'index de table exemple
+const [theHisName, ident, hiscity] = studentInfo;
+
+console.log(theHisName);
