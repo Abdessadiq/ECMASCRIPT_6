@@ -291,16 +291,16 @@ console.log(redColor);
 // console.log(red);
 // console.log(green); // Affiche gree is not defined car on a changer le nom de green
 
-// ************************ | Destructuring Object | ***********************************
+// ************************ | Destructuring Array | ***********************************
 const studentInfo = [1289, "Maria Carter", "washegton"];
-// Destructuring Object c'est de faire mapper les donnés de l'array mais a condition
+// Destructuring Array c'est de faire mapper les donnés de l'array mais a condition
 // de respecter l'order avec l'index de l'array parce que il suit avec ordere
 
 // Pour  la destructuring array de notre cas 'studentInfo' C'est = >
 // exemple (1)
 const [id, hisName, city] = studentInfo;
 
-// ce code par exemple c'est bien structurer et il est répitif =! dont repeat yourself =>
+// ce code par exemple ce n'est pas bien structurer et il est répitif =! dont repeat yourself =>
 const idStudent = studentInfo[0];
 const nameStudent = studentInfo[1];
 const cityStudent = studentInfo[2];
@@ -311,3 +311,49 @@ console.log(id, hisName, city);
 const [theHisName, ident, hiscity] = studentInfo;
 
 console.log(theHisName);
+// Exemple -- > Comment je peux modifier la valeur de 8id avec la valeur que j'ai dans
+// l'array 1234 Et en utilisant Array distructuring
+let _id = 19;
+const objectStudent = [1234, "Maria Carter..", "Washington"];
+// j'ai pas utiliser le mot clé de la création de variable par ce que la vaiable est
+// déjà créer ..Donc c'est la meme chose si je vais accéder à une autres varaibles
+let _name;
+[_id, _name] = objectStudent;
+
+console.log(_id);
+
+console.log(_name);
+
+// Exemple Comment je peux travailler avec Array disctructuring Et que j'accéde qu'une
+// seule varaible comme : Washington comme : city => city = Washington
+// let _city;
+
+const [, , _city] = objectStudent;
+console.log(_city);
+// Exemple 4
+//SWAPPING variable valtues rendre m = 45 et n = 12**
+// On peut faire ça avec Array destructuring
+let m = 12;
+let n = 45;
+
+[m, n] = [n, m];
+
+console.log(m);
+console.log(n);
+// exemple 5 : array  into the array
+
+if (true) {
+  const arrayInfo = [
+    1278,
+    "Maria Carter",
+    "Washington",
+    ["Flashtoni", "@Corpoint", "Ali_Bird"],
+  ];
+  const [id, name, city, [facebook, insta, twitter]] = arrayInfo;
+  console.log(id);
+  console.log(name);
+  console.log(city);
+  console.log(facebook);
+  console.log(insta);
+  console.log(twitter);
+}
