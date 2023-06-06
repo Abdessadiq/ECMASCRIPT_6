@@ -300,23 +300,23 @@ const studentInfo = [1289, "Maria Carter", "washegton"];
 // exemple (1)
 const [id, hisName, city] = studentInfo;
 
-// ce code par exemple ce n'est pas bien structurer et il est répitif =! dont repeat yourself =>
+// ce code par exemple ce n'est pas bien structurer et il est répititif != don't repeat yourself =>
 const idStudent = studentInfo[0];
 const nameStudent = studentInfo[1];
 const cityStudent = studentInfo[2];
 
 console.log(id, hisName, city);
-// Et si par exemple je change l'aurder les info vont aussi changer selon l'order
+// Et si par exemple je change l'ordre les info vont aussi changer selon l'ordre
 // de l'index de table exemple
 const [theHisName, ident, hiscity] = studentInfo;
 
 console.log(theHisName);
-// Exemple -- > Comment je peux modifier la valeur de 8id avec la valeur que j'ai dans
+// Exemple -- > Comment je peux modifier la valeur de _id avec la valeur que j'ai dans
 // l'array 1234 Et en utilisant Array distructuring
 let _id = 19;
 const objectStudent = [1234, "Maria Carter..", "Washington"];
 // j'ai pas utiliser le mot clé de la création de variable par ce que la vaiable est
-// déjà créer ..Donc c'est la meme chose si je vais accéder à une autres varaibles
+// déjà créer ..Donc c'est la même chose si je vais accéder à une autres variables
 let _name;
 [_id, _name] = objectStudent;
 
@@ -331,7 +331,7 @@ console.log(_name);
 const [, , _city] = objectStudent;
 console.log(_city);
 // Exemple 4
-//SWAPPING variable valtues rendre m = 45 et n = 12**
+//SWAPPING variable values rendre m = 45 et n = 12**
 // On peut faire ça avec Array destructuring
 let m = 12;
 let n = 45;
@@ -357,3 +357,59 @@ if (true) {
   console.log(insta);
   console.log(twitter);
 }
+
+// ************************ | Destructuring Function | ***********************************
+// In this course we will see how to do the destructuring in the return value of functions
+// on va voir 2 exemple
+// dans le premier exemple  on va prendre la valeur returner de la fonction et on va la faire object destruct
+// dans la 2em exemple on va faire setting a un argument  de la fonction et voir c'est quoi les bénifique de ça ..
+
+// Cette Format c'est juste une format simplifier pour retourner un object dans (**) y a format détailler
+const getStudentInfo = () => ({
+  name_1: "John Deo",
+  age_1: 18,
+});
+
+// getStudentInfo() => Return Un object {name:"John Deo", age:18};
+console.log(getStudentInfo());
+// Comment je peut faire en utilisant Object Desctructuring pour que les varaibles name et age ont
+// les valeurs John Deo et 18.
+const { name_1, age_1 } = getStudentInfo(); //
+console.log(name_1);
+console.log(age_1);
+
+// (**) Format Plus détailler ..
+const getStudentInfo2 = () => {
+  return {
+    name: "John Deo 2",
+    age: 82,
+  };
+};
+console.log(getStudentInfo2());
+
+const getFullNameF = (firstName = "John", lastName = "Doe") => {
+  return `${firstName}  ${lastName}`;
+};
+console.log(getFullNameF("Mariano", "John"));
+// Provoquer un problème pour qu'on puisse le résoudre <== Au lieu d'utliser les parameters de la fonction
+// Je les utiliser comme un object comme ..
+const getFullNameObj = ({
+  firstNameOb = "John Obj",
+  lastNameOb = "Doe Obj",
+}) => {
+  return `${firstNameOb}  ${lastNameOb}`;
+};
+const person = (getFullNameObject = {
+  firstNameOb: "Maria ..",
+  lastNameOb: "Cartner ..",
+});
+console.log(person);
+// C'est comme je fais
+const { firstNameOb = "Johan", lastNameOb = "Cartner" } = {
+  lastNameOb: "Doe",
+  firstNameOb: "Cart",
+};
+console.log(firstNameOb);
+console.log(lastNameOb);
+// c'est à dire même si je change l'ordre de lastNameOb et firstNameOb les valeur qui leurs sont affecter
+// vont pas changer de l'ordre..
