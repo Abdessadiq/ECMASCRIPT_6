@@ -413,3 +413,33 @@ console.log(firstNameOb);
 console.log(lastNameOb);
 // c'est à dire même si je change l'ordre de lastNameOb et firstNameOb les valeur qui leurs sont affecter
 // vont pas changer de l'ordre..
+// ----------------------|| For Loop and forEach, for..in for..of ||---------------------------
+
+// Exemple 1 L'utlisation de for loop
+let numbersArray = [1233, 123, 198, 9084];
+// 1 - L'initialisation
+// 2 - La Condition
+// 3 - L'incrementation..
+for (let i = 0; i < numbersArray.length; i++) {
+  console.log(i);
+  console.log(numbersArray[i]);
+}
+
+// Avec l'utilisation de forEach --> Ca s'appelle callback..
+numbersArray.forEach((element) => {
+  console.log(element);
+});
+
+// Pour for..in Ca permet d'etirer les index d'une table.. Et pas les element ..>
+for (const index in numbersArray) {
+  console.log(index);
+  // Pour accéder au élément de la table .. >
+  // J'utilise le keyword const parce que le traitement de for.in et for.of va se faire par sckop
+  // c'est à dire que a chaque va passer d'un element à un autre dans la table va créer un sckop
+  // et du coup va créer un nouveau variable c'est pour ça ne pose pas de problème ..
+  console.log(numbersArray[index]);
+}
+// Pour for..of permet d'étirer les element de la table ..
+for (const element of numbersArray) {
+  console.log(element);
+}
