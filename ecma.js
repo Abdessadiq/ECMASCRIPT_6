@@ -413,7 +413,6 @@ console.log(firstNameOb);
 console.log(lastNameOb);
 // c'est à dire même si je change l'ordre de lastNameOb et firstNameOb les valeur qui leurs sont affecter
 // vont pas changer de l'ordre..
-// ----------------------|| For Loop and forEach, for..in for..of ||---------------------------
 
 // Exemple 1 L'utlisation de for loop
 let numbersArray = [1233, 123, 198, 9084];
@@ -443,3 +442,45 @@ for (const index in numbersArray) {
 for (const element of numbersArray) {
   console.log(element);
 }
+
+// ----------------------|| Array-like & Array.from & aray.of ||---------------------------
+// Array-like : c'est comme un fake array
+// La methode de array from qui permet de convertir les array qui sont fake a des array qui sont real
+// pour utiliser les methodes qui sont fourni par les object array ..
+
+// ça c'est array
+const colors = ["red", "blue", "green"];
+console.log(colors);
+// celui la c'est un array dont je peux utiliser les fonctions de array et aussi c'est itérable
+// est considerer aussi comme object
+console.log(typeof colors);
+// je vais créer un object qui contient les meme element de array colors
+
+// ça c'est array-like
+const rgb = {
+  0: "red ",
+  1: "blue",
+  2: "green",
+  length: 3,
+}; //<==== Est considérer comme un array-like c'est à dire c'est pas un array mais comme array
+console.log(rgb.lenght);
+console.log(rgb[2]);
+
+console.log(colors);
+console.log(rgb);
+// le problème c'est que je peux pas itérer dans rgb
+// aussi les methode qui sont accédrer par color (array) sont pas accéder par rgb (object )
+let divs = document.querySelectorAll(".message");
+console.log(divs);
+// Alors pour convertir un array-like à un array on utilise
+// converting an Array-like (divs) to Array
+const divsToArray = Array.from(divs);
+// converting an Array-like to Array
+const rgbToArray = Array.from(rgb);
+console.log(rgbToArray.length);
+console.log(divsToArray[1]);
+
+// aussi avec l'utilisation de array of je peux créer un object
+// Exemple
+console.log(Array.of(1, "MariaDB", 122).concat("YellowColot"));
+// Mais Array(10) par exemple ça permet de créer un array de 10 element
