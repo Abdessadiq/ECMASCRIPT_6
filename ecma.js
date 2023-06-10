@@ -470,17 +470,42 @@ console.log(colors);
 console.log(rgb);
 // le problème c'est que je peux pas itérer dans rgb
 // aussi les methode qui sont accédrer par color (array) sont pas accéder par rgb (object )
-let divs = document.querySelectorAll(".message");
-console.log(divs);
+
+// let divs = document.querySelectorAll(".message");
+
+// console.log(divs);
+
 // Alors pour convertir un array-like à un array on utilise
 // converting an Array-like (divs) to Array
-const divsToArray = Array.from(divs);
+
+// const divsToArray = Array.from(divs);
+
 // converting an Array-like to Array
 const rgbToArray = Array.from(rgb);
 console.log(rgbToArray.length);
-console.log(divsToArray[1]);
 
-// aussi avec l'utilisation de array of je peux créer un object
+// console.log(divsToArray[1]);
+
+// aussi avec l'utilisation de array.of je peux créer un object
 // Exemple
 console.log(Array.of(1, "MariaDB", 122).concat("YellowColot"));
 // Mais Array(10) par exemple ça permet de créer un array de 10 element
+
+// ----------------------|| Array.some & Array.every ||---------------------------
+// Array.some c'est une fonction dans array constructor qui permet de retourner true si la condtion
+// est vrai une seule fois tandis que array.every ne permet de retourner true ou false si et seulement
+// toutes les valent true ou false
+/** Exemple pour array.some */
+
+const numbersForArraySome = [10, 13, 33, 110];
+
+const isGreatherThanTwenty = numbersForArraySome.some((num) => num < 20);
+
+console.log(isGreatherThanTwenty);
+
+const isEven = numbersForArraySome.some((num) => num % 2);
+console.log(isEven);
+
+/** Exemple pour array.every */
+const isGreatheThanTen = numbersForArraySome.every((number) => number > 10);
+console.log(isGreatheThanTen);
