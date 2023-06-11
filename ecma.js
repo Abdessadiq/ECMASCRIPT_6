@@ -492,9 +492,10 @@ console.log(Array.of(1, "MariaDB", 122).concat("YellowColot"));
 // Mais Array(10) par exemple ça permet de créer un array de 10 element
 
 // ----------------------|| Array.some & Array.every ||---------------------------
-// Array.some c'est une fonction dans array constructor qui permet de retourner true si la condtion
-// est vrai une seule fois tandis que array.every ne permet de retourner true ou false si et seulement
-// toutes les valent true ou false
+// Array.some c'est une fonction dans array constructor qui permet de retourner true un test passe
+//tandis que array.every ne permet de retourner true ou false si et seulement si
+// tous les tests passent
+// Les 2 methode retourn boolean
 /** Exemple pour array.some */
 
 const numbersForArraySome = [10, 13, 33, 110];
@@ -503,9 +504,11 @@ const isGreatherThanTwenty = numbersForArraySome.some((num) => num < 20);
 
 console.log(isGreatherThanTwenty);
 
-const isEven = numbersForArraySome.some((num) => num % 2);
+const isEven = numbersForArraySome.some((num) => num % 2 === 0);
 console.log(isEven);
 
 /** Exemple pour array.every */
 const isGreatheThanTen = numbersForArraySome.every((number) => number > 10);
 console.log(isGreatheThanTen);
+
+// --------|| Primitive types (passed by value) vs Objects (passed by reference)  ||---------------------------
