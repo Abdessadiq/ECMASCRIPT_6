@@ -511,4 +511,3 @@ console.log(isEven);
 const isGreatheThanTen = numbersForArraySome.every((number) => number > 10);
 console.log(isGreatheThanTen);
 
-// --------|| Primitive types (passed by value) vs Objects (passed by reference)  ||---------------------------
