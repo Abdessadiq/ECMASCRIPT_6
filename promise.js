@@ -13,12 +13,28 @@
 // Promise => "lesson"
 // Promise => state "initial"  <= Une fois promise est créer ..
 // Promise => "I keep It " => "Lesson"  => resolve => state "fulfilled"
-// Promise => "I don't keep it " => " sorry message "  or "Nothing" => "reject"
-const delivredMessage = new Promise((resolve, reject) => {
+// Promise => "I don't keep it " => " sorry message "  or "Nothing" => "reject" => state "rejected"
+
+const delivredLesson = new Promise((resolve, reject) => {
   setTimeout(() => {
+    if (true) reject(new Error("Sorry I con't deliver this lesson "));
     resolve("The lesson is delivred..");
-  }, 2000);
+  }, 1000);
 });
 
 // Student
+const student = delivredLesson.then(
+  (result) => {
+    console.log(result);
+  },
+  (errorHandler) => {
+    console.log(errorHandler);
+  }
+);
+// Si on est sûr que la promise va nous retourner une erreur on peux mettre que :
+const studentErr = delivredLesson.catch((errorHandler) => {
+  console.log(errorHandler);
+});
+// Mais c'est toujours préfirable d'utiliser la méthode then()
+
 // Lesson
