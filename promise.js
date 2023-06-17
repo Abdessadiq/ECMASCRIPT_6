@@ -17,7 +17,7 @@
 
 const delivredLesson = new Promise((resolve, reject) => {
   setTimeout(() => {
-    if (true) reject(new Error("Sorry I con't deliver this lesson "));
+    if (false) reject(new Error("Sorry I con't deliver this lesson "));
     resolve("The lesson is delivred..");
   }, 1000);
 });
