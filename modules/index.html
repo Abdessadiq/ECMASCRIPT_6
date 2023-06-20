@@ -15,6 +15,15 @@
     <!-- <script src="algebra.js"></script>
     <script src="arithmetic.js"></script> -->
     <!-- Mais Pour pouvoir utiliser le principe de moduler Il faut ajouter type="module" -->
-    <script type="module" src="calculator.js"></script>
+
+    <!-- Moduler -->
+    <script async type="module" src="calculator.js"></script>
+
+    <!-- fallback -->
+    <!-- J'ai ajouté nomodule pour dire que si le naviga ne supporte pas les modules tu va charger ce fichier au lieu de l'autre  -->
+    <script nomodule src="fallback.js"></script>
+
+    <!-- Regular -->
+    <script src="classic.js"></script>
   </body>
 </html>

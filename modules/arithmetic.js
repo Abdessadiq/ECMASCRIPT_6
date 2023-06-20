@@ -8,20 +8,20 @@ export const add = (x, y) => {
 /**
  * Multiplication
  */
-const mul = (x, y) => {
+export const mul = (x, y) => {
   return parseFloat(x) * parseFloat(y);
 };
 
 /**
  * Division
  */
-const div = (x, y) => {
+export const div = (x, y) => {
   return parseFloat(x) / parseFloat(y);
 };
 
 /**
  * Substraction
  */
-const sub = (x, y) => {
+export const sub = (x, y) => {
   return parseFloat(x) - parseFloat(y);
 };

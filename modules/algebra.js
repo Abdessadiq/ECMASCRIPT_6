@@ -1,7 +1,7 @@
 /**
  * Square root
  */
-const square = (x) => {
+export const square = (x) => {
   x = parseFloat(x);
   return Math.sqrt(x);
 };
@@ -9,7 +9,7 @@ const square = (x) => {
 /**
  * Logarithem
  */
-const log = (x) => {
+export const log = (x) => {
   x = parseFloat(x);
   return Math.log(x);
 };
