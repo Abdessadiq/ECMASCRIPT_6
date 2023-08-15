@@ -17,7 +17,7 @@ console.log(getNumber());
 if (true) {
   var number = 12;
 }
-console.log(number); // ça passe number is
+console.log(number); // ça passe number
 
 // ---------- var c'est un keyword qu'on utilise dans ECMAScript 5 ---------------
 //   var keyword  c'est Function-Scoped  ==> c'est à dire que si j'utilise var dans
@@ -42,8 +42,8 @@ console.log(number); // ça passe number is
 // afficte aucune valeur ------< et c'est ça le Hoisting
 //----------------------------- -----------------------------------
 
-// console.log(anythings);
-var enythings = " this is any thing juste for testing"; // affichier undefined
+// console.log(anythings); // affichier undefined
+var enythings = " this is any thing juste for testing";
 
 // *********************************** VAR vs LET ************************************
 // ---------------------------------  LET --------------------------
@@ -86,12 +86,12 @@ for (let i = 0; i < 4; i++) {
   console.log(" la valeur de b dans LOOP for : " + b);
 }
 console.log(b);
-// Résumé :  l'objectif de cette exmple c'est juste pour manterer que
+// Résumé :  l'objectif de cette exmple c'est juste pour montrer que
 // la varaible b qu'on  a déclarer dans toute les block au dessous sont
-// déconnecter les uns avec les autres m
+// déconnecter les uns avec les autres
 // EST c'est déconceiller de déclarrer une variable avec  le même nom..
-// DONC le risque de keyword var c'est que on déclare une variable global
-// c'est pour cas viens let pour corréger ce problème
+// DONC le risque de keyword 'var' c'est que on déclare une variable global
+// c'est pour ça viens 'let' pour corréger ce problème
 //-------------------------------------------------------------------------
 
 //--------------------------- CONST -------------------------------------
@@ -147,10 +147,10 @@ console.log(
   sayHello("With the old version of ES < 6" + "ABDESSADIQ", "BABA HAMOU")
 );
 console.log(
-  sayHello1("With the last version of ES > 6" + "ABDESSADIQ", "BABA HAMOU")
+  sayHello1("With the last version of ES >= 6" + "ABDESSADIQ", "BABA HAMOU")
 );
 // RULES  --> Enlever keyword function  et Les "curly braces {}" s'il en a un seul param
-// on peut aussi enlever return si on a une seul ligne dans la fonction Et Ajouter
+// on peut aussi enlever return si on a une seule ligne dans la fonction Et Ajouter
 // Fat Arrow '=>' après les parentaise
 
 //------------------------------the Second Exemple  ----------------------------------
@@ -218,7 +218,7 @@ incrementNumber.increment();
 // -------------------- | Template Literales | ------------------------------------------
 
 // Template Literales c'est une methode qui vient avec SC6 pour simplifier et faciliter
-// Comment on peut formater & compbiner les expression comme String variables, functions...
+// Comment on peut formater & combiner les expression comme String variables, functions...
 
 // Exemple (1) String Concatination
 // ` .. ${Expression JS}`
@@ -294,7 +294,7 @@ console.log(redColor);
 // ************************ | Destructuring Array | ***********************************
 const studentInfo = [1289, "Maria Carter", "washegton"];
 // Destructuring Array c'est de faire mapper les donnés de l'array mais a condition
-// de respecter l'order avec l'index de l'array parce que il suit avec ordere
+// de respecter l'ordre avec l'index de l'array parce qu'il suit avec ordre
 
 // Pour  la destructuring array de notre cas 'studentInfo' C'est = >
 // exemple (1)
@@ -488,7 +488,7 @@ console.log(rgbToArray.length);
 
 // aussi avec l'utilisation de array.of je peux créer un object
 // Exemple
-console.log(Array.of(1, "MariaDB", 122).concat("YellowColot"));
+console.log(Array.of(1, "MariaDB", 122).concat("YellowColor 'à"));
 // Mais Array(10) par exemple ça permet de créer un array de 10 element
 
 // ----------------------|| Array.some & Array.every ||---------------------------
@@ -510,4 +510,3 @@ console.log(isEven);
 /** Exemple pour array.every */
 const isGreatheThanTen = numbersForArraySome.every((number) => number > 10);
 console.log(isGreatheThanTen);
-
