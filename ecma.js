@@ -23,19 +23,19 @@ console.log(number); // ça passe number
 //   var keyword  c'est Function-Scoped  ==> c'est à dire que si j'utilise var dans
 //   la fonction je peux pas l'utilisé en dehors de la block de cette fonction
 //   mais par contre si je la déclare dans un autre block que la fontion
-//   comme le block de if ou for loop .. je peur l'utiliser
+//   comme le block de if ou for loop .. je peux l'utiliser
 //----------------------------------------------------------------
 
 // ---------- let c'est un keyword qu'on utilise depuis ECMAScript 6 ---------------
 //   let keyword  c'est Block-Scoped  ==> c'est à dire que si j'utilise let keyword
 // dans la déclaration de variable dans n'importe block statement je peux pas y accéder
-// dehors de ce block contre le keywords var...
+// en dehors de ce block contre le keywords var...
 
 //----------------------------------------------------------------
 
 // ---------------------------------- Hoisting -------------------------
 // Hoisting c'est à dire que le compilateur de js prend toutes les variables
-// déclarer dans le programme et il les enregister toute au début de programme
+// déclarer dans le programme et il les enregiste tout au début de programme
 // dans notre cas il m'affiche  undefined  dans la déclaration de ma variable
 // anythings c'est à dire que la varaible est existe
 // mais il est indifiner c'est comme si je déclarer  la variable mais je ne lui
@@ -47,11 +47,10 @@ var enythings = " this is any thing juste for testing";
 
 // *********************************** VAR vs LET ************************************
 // ---------------------------------  LET --------------------------
-// on ne peut pas déclarer une variable 2 fois avec ---- LET ----
+//1 - on ne peut pas déclarer une variable 2 fois avec ---- LET ----
 // dans le même block : exemple  ----->
 // let y = 20;
-// let y = 20;  // le débugeur générere une erreur comme quoi cette variable
-// est déjà déclarer
+// let y = 20;  // le débugeur générere une erreur comme quoi cette variable est déjà déclarer
 // mais par contre si je le déclare dans un autre block ça passe
 // exemple	 : >>>>>>>>>>>
 let x = 199;
@@ -62,7 +61,7 @@ if (true) {
 console.log("La valeur de x à l'exterieur du block if : " + x);
 
 // --------------------------------- Full exemple for all --------------------------
-let y = 12220;
+let y = 220;
 let b = 19;
 b = 100;
 console.log(" la valeur de b dans le global : " + b);
@@ -70,21 +69,21 @@ if (true) {
   let b = 20;
   b = 299;
   console.log("la valeur de b dans le block statement if : " + b);
-  // la variable b Ici considérer commen Block-Scoped
+  // la variable b Ici considérer comme Block-Scoped
 }
 
 function getB() {
   let b = 200;
   b = 2999;
   console.log(" la valeur de b dans la fonction getB : " + b);
-
-  // la variable b Ici considérer commen Function-Scoped
+  // la variable b Ici considérer comme Function-Scoped
 }
 for (let i = 0; i < 4; i++) {
   let b = i + 1;
 
   console.log(" la valeur de b dans LOOP for : " + b);
 }
+
 console.log(b);
 // Résumé :  l'objectif de cette exmple c'est juste pour montrer que
 // la varaible b qu'on  a déclarer dans toute les block au dessous sont
@@ -97,14 +96,14 @@ console.log(b);
 //--------------------------- CONST -------------------------------------
 
 // la même chose que LET c-a-d que toutes les régle de LET
-//s'applique aussi sur CONST la seule diffrence c'est que on ne peut pas
+//s'applique aussi sur CONST la seule dérrirence c'est que on ne peut pas
 // changer la valeur DANS LE SCOPE : exemple : -------->
 
 const API_KEY = 8080;
-// const API_KEY = 212; // ça passe pas ....
+// API_KEY = 212; // ça passe pas ....Assignment to constant variable.
 
 if (true) {
-  const API_KEY = 112; // ça passe ..
+  const API_KEY = 112; // ça passe .. cette variable est déconnecté à l'autre déclarer en haut..
   console.log("la valeur de API_KEY dans le block if : " + API_KEY);
 }
 console.log(API_KEY);
@@ -118,7 +117,7 @@ console.log(API_KEY);
 //Arrow function ou Fat Arrow Funtion ( => ) c'est une méthode de créer les fonction et qui vient
 // avec l'arrivé de ES6  et il travail avec les new browser et si on veut que notre
 // fonction marche meme dans les anciens browser il faut faire ce qu'on
-//appelle "Transpile the code"
+//appelle "Transpile the code" --> a voir après..
 
 //------------------------- Arrow Functions - Pros = Avantage ------------------------
 // * Map the Keyword "this" without the using  bind
@@ -130,7 +129,7 @@ console.log(API_KEY);
 // * Make code difecult to Read
 
 //------------------The First Exemple--------------------------------------------------
-// exemple for old version of ecmascript < 6
+// exemple for old version ecmascript < 6
 // On utilise const dans la déclaration de la fonction pour éviter le changement
 // de la valeur de cette fonction  ...
 const sayHello = function (firstName, lastName) {
@@ -141,13 +140,13 @@ const sayHello = function (firstName, lastName) {
 // Exemple Use Arrow Funtion ES >=6 the new version of SC  (Two Arguments)
 
 const sayHello1 = (firstName, lastName) =>
-  "Hello " + firstName + " " + lastName;
+  "Hello " + firstName + " - " + lastName;
 
 console.log(
-  sayHello("With the old version of ES < 6" + "ABDESSADIQ", "BABA HAMOU")
+  sayHello("With the old version of ES < 6 " + "ABDESSADIQ", "BABA HAMOU")
 );
 console.log(
-  sayHello1("With the last version of ES >= 6" + "ABDESSADIQ", "BABA HAMOU")
+  sayHello1("With the last version of ES >= 6 " + "ABDESSADIQ", "BABA HAMOU")
 );
 // RULES  --> Enlever keyword function  et Les "curly braces {}" s'il en a un seul param
 // on peut aussi enlever return si on a une seule ligne dans la fonction Et Ajouter
@@ -187,7 +186,7 @@ const getObject = () => ({
 });
 console.log(getObject()); //
 
-// Problem with this ----------------------------------------------------------------
+// Problem with the Keyword "this" ----------------------------------------------------------------
 // exemple for the old ES
 const incrementNumber = {
   num: 100,
