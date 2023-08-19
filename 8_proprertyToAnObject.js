@@ -3,12 +3,12 @@
 let studentInfo = {
   firstName: "ABDESSADIQ",
   lastName: "BABA HAMOU",
-  //   get fullName() {
-  //     return `${this.firstName} & ${this.lastName}`;
-  //   },
-  //   set fullName(value) {
-  //     [this.firstName, this.lastName] = value.split(" ");
-  //   },
+  get fullName() {
+    return `${this.firstName} & ${this.lastName}`;
+  },
+  set fullName(value) {
+    [this.firstName, this.lastName] = value.split(" ");
+  },
 };
 
 // value
@@ -22,13 +22,13 @@ Object.defineProperty(studentInfo, "college", {
   value: "Harvard",
   // si la writable vaut false --> permet de bloquer l'update de la valeur
   writable: true,
-  // Si la enumerable vaut false parmer d'accéder au key dans l'objet vois la boocle for ..
+  // Si la enumerable vaut false parmet d'accéder au key dans l'objet voir la boocle for ..
   enumerable: true,
   // Si configurable vaut true ça a permet d'accèder au configuration comme delette
-  configurable: true,
+  // configurable: true,
 });
 
-delete studentInfo.college;
+// delete studentInfo.college;
 console.log(studentInfo);
 
 // The loop for..

@@ -5,9 +5,10 @@
 const varBool = false;
 console.log(varBool);
 
-const varUndefined = undefined;
-// Or ==> const varUndifined; // si on déclare une variable sans le donné une valeur -> prend la valeur undefined
+const varUndefined = undefined; // Or ==>
+let varUndifinedA; // si on déclare une variable sans le donné une valeur -> prend la valeur undefined
 console.log(varUndefined);
+console.log(varUndifinedA);
 
 const varNull = null;
 console.log(varNull);

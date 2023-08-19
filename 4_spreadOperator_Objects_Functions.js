@@ -1,4 +1,4 @@
-// --------------------||Spread Operator (Objects.. Functions)  ||---------------------------
+// --------------------|| Spread Operator (Objects.. Functions)  ||---------------------------
 // Voir comment extraire les propriéties et les valeur dans un object
 // Voir comment travailler avec array comme un argument pour une fonction en utilisant
 // spread Operator
@@ -39,3 +39,10 @@ console.log(result);
 const numbers = [12, 33, 55];
 const _result = addNumbers(...numbers);
 console.log(_result);
+
+const concatination = (a, b, c, d) => {
+  return `Les valeur de Table avec SpreadOperator : ${a} - ${b} - ${c} - ${d}`;
+};
+
+let arrayTest = ["ABDOU", 100, "Qamar", 1997];
+console.log(concatination(...arrayTest));

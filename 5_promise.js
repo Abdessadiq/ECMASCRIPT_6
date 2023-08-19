@@ -1,7 +1,7 @@
 // --------------------|| Promise ||---------------------------
 /**
- * C'est quoi: supposant qu'un prof dit à son étudiant qu'il va envoyé un lesson
- * c'est à dire le prof à promis son étudient qu'il va envoyé un lesson :
+ * C'est quoi: supposant qu'un prof dit à son étudiant qu'il va lui donner un lesson
+ * c'est à dire le prof à promis son étudient qu'il va lui donner un lesson :
  * Donc Y a 2 possiblité :
 
  * 1 - Soit l'étudiant reçoit le cours Et c'est Bon
@@ -17,7 +17,7 @@
 
 const delivredLesson = new Promise((resolve, reject) => {
   setTimeout(() => {
-    if (false) reject(new Error("Sorry I con't deliver this lesson "));
+    reject(new Error("Sorry I con't deliver this lesson "));
     resolve("The lesson is delivred..");
   }, 1000);
 });

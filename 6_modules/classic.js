@@ -1,5 +1,5 @@
 console.log("regular");
-// par constre ici c'est pas besoin d'utiliser le keyword
+// par contre ici c'est pas besoin d'utiliser le keyword
 // Pour la déclaration des variable
 
 // Et pour activer le strict mood il faut ajouter
