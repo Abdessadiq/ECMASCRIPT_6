@@ -210,9 +210,9 @@ const incrementNumber1 = {
     }, 1000);
   },
 };
-incrementNumber.increment();
+incrementNumber1.increment();
 
-// dans l'ecxemple de ES6 on a pas besoin d'utiliser la fonction bind..
+// dans l'exemple de ES6 on a pas besoin d'utiliser la fonction bind..
 
 // -------------------- | Template Literales | ------------------------------------------
 
@@ -221,7 +221,7 @@ incrementNumber.increment();
 
 // Exemple (1) String Concatination
 // ` .. ${Expression JS}`
-console.log("********************* | Template Laterales... | ****************");
+//************************************* | Template Laterales... | *********************"
 const firstName = "John";
 const lastName = "Dae";
 const theFullName = `${firstName} ${lastName}`;
@@ -279,7 +279,7 @@ const car = {
   },
 };
 
-// La création d'un desctucuring Object se fait comme : keyword (let, const ..) {} = NameObject
+// La création d'un desctucuring Object se fait comme : keyword (let, const ..) {declation des champs} = NameObject
 const {
   name,
   colors: { red: redColor, green: greenClolor, blue = false },
@@ -368,7 +368,13 @@ const getStudentInfo = () => ({
   name_1: "John Deo",
   age_1: 18,
 });
-
+// (**) Format Plus détailler ..
+const getStudentInfo2 = () => {
+  return {
+    name: "John Deo 2",
+    age: 82,
+  };
+};
 // getStudentInfo() => Return Un object {name:"John Deo", age:18};
 console.log(getStudentInfo());
 // Comment je peut faire en utilisant Object Desctructuring pour que les varaibles name et age ont
@@ -377,13 +383,6 @@ const { name_1, age_1 } = getStudentInfo(); //
 console.log(name_1);
 console.log(age_1);
 
-// (**) Format Plus détailler ..
-const getStudentInfo2 = () => {
-  return {
-    name: "John Deo 2",
-    age: 82,
-  };
-};
 console.log(getStudentInfo2());
 
 const getFullNameF = (firstName = "John", lastName = "Doe") => {
@@ -392,18 +391,24 @@ const getFullNameF = (firstName = "John", lastName = "Doe") => {
 console.log(getFullNameF("Mariano", "John"));
 // Provoquer un problème pour qu'on puisse le résoudre <== Au lieu d'utliser les parameters de la fonction
 // Je les utiliser comme un object comme ..
-const getFullNameObj = ({
-  firstNameOb = "John Obj",
-  lastNameOb = "Doe Obj",
-}) => {
+
+const getFullNameObj = ({ firstNameOb = "John ", lastNameOb = "Doe " }) => {
   return `${firstNameOb}  ${lastNameOb}`;
 };
-const person = (getFullNameObject = {
-  firstNameOb: "Maria ..",
-  lastNameOb: "Cartner ..",
+
+// c'est ça le problème je peux pas accéder AVEC les valeur de fisrtName et lastName avec le bon ordre..
+
+const person0 = getFullNameF("cartner", "mariea");
+console.log(person0);
+// Je veux que même Si j'ai envoyé à la méthodes des variable avec
+//des ordre différent il faut qu'ail pas un souci
+const person = getFullNameObj({
+  lastName: "Hi ..",
+  firstName: "Me ..",
 });
+
 console.log(person);
-// C'est comme je fais
+// C'est comme Si je fais
 const { firstNameOb = "Johan", lastNameOb = "Cartner" } = {
   lastNameOb: "Doe",
   firstNameOb: "Cart",
@@ -412,6 +417,7 @@ console.log(firstNameOb);
 console.log(lastNameOb);
 // c'est à dire même si je change l'ordre de lastNameOb et firstNameOb les valeur qui leurs sont affecter
 // vont pas changer de l'ordre..
+//***********************|| For Loop. forEach..| for..in | for.of||********************************* */
 
 // Exemple 1 L'utlisation de for loop
 let numbersArray = [1233, 123, 198, 9084];
@@ -424,16 +430,25 @@ for (let i = 0; i < numbersArray.length; i++) {
 }
 
 // Avec l'utilisation de forEach --> Ca s'appelle callback..
-numbersArray.forEach((element) => {
-  console.log(element);
+numbersArray.forEach((e) => {
+  console.log(e);
+});
+["Abdessadiq", "Baba", "100"].forEach((az) => {
+  if (az === "100") {
+    parseInt(az);
+
+    console.log(az);
+  }
+  console.log(az);
 });
 
 // Pour for..in Ca permet d'etirer les index d'une table.. Et pas les element ..>
 for (const index in numbersArray) {
   console.log(index);
+  console.log(numbersArray[index]);
   // Pour accéder au élément de la table .. >
   // J'utilise le keyword const parce que le traitement de for.in et for.of va se faire par sckop
-  // c'est à dire que a chaque va passer d'un element à un autre dans la table va créer un sckop
+  // c'est à dire que a chaque fois va passer d'un element à un autre dans la table va créer un sckop
   // et du coup va créer un nouveau variable c'est pour ça ne pose pas de problème ..
   console.log(numbersArray[index]);
 }
@@ -462,7 +477,7 @@ const rgb = {
   2: "green",
   length: 3,
 }; //<==== Est considérer comme un array-like c'est à dire c'est pas un array mais comme array
-console.log(rgb.lenght);
+console.log(rgb.length);
 console.log(rgb[2]);
 
 console.log(colors);
@@ -489,9 +504,12 @@ console.log(rgbToArray.length);
 // Exemple
 console.log(Array.of(1, "MariaDB", 122).concat("YellowColor 'à"));
 // Mais Array(10) par exemple ça permet de créer un array de 10 element
-
+let objArr = Array.of(10, "This is for Test ..", 10 < 12);
+let ThisArr = Array.of(19, 12);
+console.log(objArr);
+console.log(ThisArr);
 // ----------------------|| Array.some & Array.every ||---------------------------
-// Array.some c'est une fonction dans array constructor qui permet de retourner true un test passe
+// Array.some c'est une fonction dans array constructor qui permet de retourner true si un test passe
 //tandis que array.every ne permet de retourner true ou false si et seulement si
 // tous les tests passent
 // Les 2 methode retourn boolean
