@@ -40,7 +40,10 @@ function getUser() {
 // La  fonction setTimeout ce n'est pas une fonction js mais c'est dans un timer dans le browser..
 // c'est une fonctionnalité dans le web API
 // Il prend dans 1er param un callback (c'est à dire quand j'utilise un fonction comme argument
-// dans une autre fonctione ..) 2er param C'est une Timer
+// dans une autre fonctione ..) 2em param C'est une Timer
+
+
+// Donc Le code Ici soit Asynchronous...
 setTimeout(getUser, 1000);
 SayHi();
 console.log("This Last Code...");
