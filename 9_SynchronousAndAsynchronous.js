@@ -18,8 +18,8 @@
 //! 3- Parallel
 //! 4- Non Parallel
 //! 5- Asynchronous
-//! - Asynchronous Code  ===> paralel
-//! - synchronous Code  ===> Non paralel
+//! - Asynchronous Code  ===> paralel  ===> multi Thread
+//! - synchronous Code  ===> Non paralel ===> Single Thread
 
 // Le Javascript Est Single threated donc c'est Synchronous C'est à dire que
 // dans javascript il faut éxécuter le code ligne par ligne avec ordre..Top To Buttom
@@ -27,7 +27,7 @@
 //--- Parfois On a besoin que notre code soit Asynchronous --  Comme par Exemple
 // Au moment au je vais récupérer les données dans la base de données dans une méthode
 // Je veux qu'il continuer le traitement de la page jusqu'à ce que les données arrive
-// Pour implémenter L'asynchonisation dans javascript il en a par exemple Promise
+// Pour implémenter L'asynchonisation dans javascript il y a par exemple Promise
 // Aussi Async/await des notion arriver dans js 2017 pour régler des problème dans Promise
 
 function SayHi() {
@@ -41,7 +41,6 @@ function getUser() {
 // c'est une fonctionnalité dans le web API
 // Il prend dans 1er param un callback (c'est à dire quand j'utilise un fonction comme argument
 // dans une autre fonctione ..) 2em param C'est une Timer
-
 
 // Donc Le code Ici soit Asynchronous...
 setTimeout(getUser, 1000);
